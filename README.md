@@ -1,0 +1,15 @@
+- Category
+  - Objects
+    - e.g.: `A`, `B`, `C`
+  - Morphisms
+    - e.g.; `A->B`, `B->C`
+- Abstraction
+  - Composition
+      - ∀(`f: A->B` & `g: B->C`) ∃(`g∘f : A->C`)
+        - g after f order because: `g(f(x))`
+      - Associativity
+        - <img src="associativity.png" alt="associativity diagram" width="300"/>
+  - Identity
+    - ∀x ∈ Ob(C), ∃ id<sub>X</sub> : X → X
+      - C: category
+      - Ob: objects
