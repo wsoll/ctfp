@@ -1,7 +1,7 @@
 - Category
   - Objects
     - e.g.: `A`, `B`, `C`
-  - Morphisms
+  - Morphisms/Arrows
     - e.g.; `A->B`, `B->C`
 - Abstraction
   - Composition
