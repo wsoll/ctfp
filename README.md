@@ -1,3 +1,5 @@
+Based on [Bartosz Milewski's lectures](https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM)
+# Basic terms & axioms
 - Category
   - Objects
     - e.g.: `A`, `B`, `C`
@@ -19,3 +21,15 @@
       - g ∘ id<sub>a</sub> = g
     - <img src="pic/identity.png" alt="identity diagram" width="300"/>
   
+# Relationship
+<img src="pic/relationship.png" alt="relation diagram" width="300"/>
+
+- Mapping objects in sets with arrow we have ordered pairs
+  - `(a, b) != (b, a)`
+- Without an arrow we have unordered pair
+  - `{b,a} = {a,b}`
+- **Directionality** comes from function axioms.
+- **Order** comes from set axioms
+- Image is a subset of the codomain, not necessarily all of it.
+  - `f: X->Y, f(X) = {f(x) | x ∈ X}`
+    - e.g.: `X = {1,2,3}, Y = {a,b,c,d}, Im(f) = {a,c}`
