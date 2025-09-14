@@ -8,8 +8,14 @@
       - ∀(`f: A->B` & `g: B->C`) ∃(`g∘f : A->C`)
         - g after f order because: `g(f(x))`
       - Associativity
-        - <img src="associativity.png" alt="associativity diagram" width="300"/>
+        - `h ∘ (g ∘ f) = (h ∘ g) ∘ f`
+      - <img src="pic/associativity.png" alt="associativity diagram" width="300"/>
   - Identity
     - ∀x ∈ Ob(C), ∃ id<sub>X</sub> : X → X
       - C: category
       - Ob: objects
+    - left & right identity
+      - id<sub>b</sub> ∘ f = f
+      - g ∘ id<sub>a</sub> = g
+    - <img src="pic/identity.png" alt="identity diagram" width="300"/>
+  
