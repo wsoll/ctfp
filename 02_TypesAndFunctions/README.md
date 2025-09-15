@@ -4,4 +4,8 @@
 - 02
   - > Try to memoize a function from your standard library that you normally use to produce random numbers. Does it work?
     - [ex02_randlib](ex02_randlib.py)
-    - It works - the random (randrange) function **is not pure.**
+    - It doesn't work - the random (randrange) function **is not pure.**
+- 03
+  - > Most random number generators can be initialized with a seed. Implement a function that takes a seed, calls the random number generator with that seed, and returns the result. Memoize that function. Does it work?
+    - [ex03_seed.py](ex03_seed.py)
+    - It works as using seed makes it deterministic (pure)

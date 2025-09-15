@@ -17,6 +17,7 @@ def memoize(f: Callable[[P], B]):
     def g(x: Arg):
         if x in memoized:
             print(f"Memozied has been used for {x}: {memoized[x]}")
+            print(f"If not memoized it would be: {f(x)}")
             return memoized[x]
         tmp = f(x)
         memoized[x] = tmp
