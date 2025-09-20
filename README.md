@@ -1,5 +1,5 @@
 Based on [Bartosz Milewski's lectures](https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM)
-# Basic terms & axioms
+# Basic terms and axioms
 - Category
   - Objects
     - e.g.: `A`, `B`, `C`
@@ -45,9 +45,24 @@ Is the function invertible? Usually it is not.
 - A function that's invertible is called **isomorphism**
 
 Why most function and not invertible?
-1. Let's take function `bool isEven(int x)`. It maps x<sub>1</sub>, x<sub>2</sub>, ... to two values:
+1. Let's take function `bool isEven(int x)`. It collapses x<sub>1</sub>, x<sub>2</sub>, ... to two values:
 true or false. You can make an inversion, however you have multiple values called **fiber**.
   - <img src="pic/fiber.png" alt="fiber" width="300"/>
 2. If a function maps to an image of codomain, you can't really invert codomain. You can only make an inversion of the image.
   - <img src="pic/image.png" alt="image" width="300"/>
 
+# Correspondence
+- Point (1) from [directionality] corresponds to **abstracting**
+  - > You can boil an egg, but you can't unboil the egg.
+  - > I really don't care of which points I came from (x fiber). I'm only interested in one property there (y)
+    - > From wherever we came from, it's over and done.
+  - If function **does not collapse** things, then it's called **injective function (injection)**:
+    - x<sub>1</sub> ->fx<sub>1</sub>
+    - x<sub>2</sub> ->fx<sub>2</sub>
+- Point (2) from [directionality] corresponds to **modeling** 
+  - One set to the other set.
+  - I see one figure in a category in different category.
+  - A man could cast a shadow in a cave (like in Plato's cave)
+    - if the function cover the whole codomain (image is equal to codomain) is called **subjective function**
+
+If a function is **injective** and **subjective**, it's actually **isomorphism**, you can invert it.
