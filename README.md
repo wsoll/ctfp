@@ -1,4 +1,11 @@
 Based on [Bartosz Milewski's lectures](https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM)
+
+- [Basic terms and axioms](#basic-terms-and-axioms)
+- [Relationship](#relationship)
+- [Directionality](#directionality)
+- [Correspondence](#correspondence)
+- [Composition](#composition)
+ 
 # Basic terms and axioms
 - Category
   - Objects
@@ -60,9 +67,23 @@ true or false. You can make an inversion, however you have multiple values calle
     - x<sub>1</sub> ->fx<sub>1</sub>
     - x<sub>2</sub> ->fx<sub>2</sub>
 - Point (2) from [directionality] corresponds to **modeling** 
-  - One set to the other set.
-  - I see one figure in a category in different category.
+  - One set to the other set. I see one figure in a category in different category.
   - A man could cast a shadow in a cave (like in Plato's cave)
-    - if the function cover the whole codomain (image is equal to codomain) is called **subjective function**
+  - if the function cover the whole codomain (image is equal to codomain) is called **subjective function**
+    - ∀y ∃x,y = fx
 
 If a function is **injective** and **subjective**, it's actually **isomorphism**, you can invert it.
+
+How to talk about **injections** and **subjections** as can't talk about elements in Category Theory - these are abstracted.
+
+I have to explain these things only in terms of morphisms.
+> No matter how good you microscope is, you cannot look inside a little point.
+
+> If my microscope doesn't work maybe my telescope could work.
+
+> In Category Theory we don't like latin. We use greek.
+
+- Surjective (onto) -> **Epic**, **Epimorphism**
+- Injective -> **Monic**, **Monomorphism**
+
+# Composition
