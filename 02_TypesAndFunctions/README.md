@@ -14,12 +14,22 @@
   - [ex04_pureness](ex04_pureness.cpp)
     - > The factorial function from the example in the text.
     - `std::getchar()`
+      - it is not pure (and no determinisitc like)
     - ```c++
       bool f() { 
         std::cout << "Hello!" << std::endl;
         return true; 
       }
       ```
+    - ```c++
+      int f(int x)
+      {
+          static int y = 0;
+          y += x;
+          return y;
+      }
+      ```
+        - it doesn't work as static variable is stateful
       
 }
 

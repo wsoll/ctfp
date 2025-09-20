@@ -3,38 +3,33 @@
 #include <unordered_map>
 #include "types.h"
 
-template <typename Arg, typename Result>
-class Memoize {
-public:
-    // Alias
-    using Func = std::function<Result(Arg)>;
 
-    // Constructor
-    Memoize(Func f) : func(f) {}
+bool f() {
+    std::cout << "Hello!";
+    return true;
+}
 
-    Result operator()(Arg x){
-        auto it = cache.find(x);
-        if (it != cache.end()) {
-            std::cout << "Cache used for argument: " << x << std::endl;
-            return it->second;
-        }
-        Result res = func(x);
-        cache[x] = res;
-        return res;
-    }
-private:
-    Func func;
-    std::unordered_map<Arg, Result> cache;
-};
+int f2(int x) {
+    static int y = 0;
+    y += x;
+    return y;
+}
 
 
 int main() {
     Memoize<int, int> memoFactorial(factorial);
-    Memoize<int, int> memoGetChar(std::getchar);
 
-    std::cout << "1: Factorial(30): " << memoFactorial(30) << std::endl;
-    std::cout << "2: Factorial(30): " << memoFactorial(30) << std::endl;
-    memoGetChar();
+    std::cout << "1: Factorial(5): " << memoFactorial(5) << std::endl;
+    std::cout << "2: Factorial(5): " << memoFactorial(5) << std::endl;
+
+    MemoizeZero<bool> memoF(f);
+    std::cout << "1: memoF(): " << memoF() << std::endl;
+    std::cout << "2: memoF(): " << memoF() << std::endl;
+
+    Memoize<int, int> memoF2(f2);
+    std::cout << "1: memoF2(1): " << memoF2(1) << std::endl;
+    std::cout << "2: memoF2(2): " << memoF2(2) << std::endl;
+    std::cout << "3: memoF2(1): " << memoF2(1) << std::endl;
 
     return 0;
 }
