@@ -20,7 +20,7 @@
       - **composition**: being able to check partial profile of a friend of my friend
 - 06
   - > When is a directed graph a category?
-    1. A direct graph is a category when every vertex has an identity arc.
+    1. A direct graph is a category when every node has an identity arrow.
     2. Between any two arcs `f: A->B` & `g: B->C` there's another arc `g∘f : A->C` that is a composition: g(f(x))
     3. The composition satisfies the associativity: `h ∘ (g ∘ f) = (h ∘ g) ∘ f`
     4. The composition satisfies unit law: (id<sub>b</sub> ∘ f = f) & (g ∘ id<sub>a</sub> = g)
