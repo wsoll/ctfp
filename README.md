@@ -1,12 +1,124 @@
-Based on [Bartosz Milewski's lectures](https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM)
+Based on 
+1. Milewski, B. (2019). Category theory for programmers. Blurb.
+2. [Milewski B. Course on Category Theory I, YouTube](https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_)
+3. Cheng, E. (2023). The joy of abstraction: An exploration of math, category theory, and life. Cambridge University Press.
 
-- [Basic terms and axioms](#basic-terms-and-axioms)
-- [Relationship](#relationship)
-- [Directionality](#directionality)
-- [Correspondence](#correspondence)
-- [Composition](#composition)
- 
-# Basic terms and axioms
+---
+
+- [Introduction](#introduction)
+  * [Reflexity (Zwrotność)](#reflexity-zwrotno)
+  * [Symmetry](#symmetry)
+    + [Antisymmetry](#antisymmetry)
+  * [Transitivity (Przechodniość)](#transitivity-przechodnio)
+    + [Antisymmetry](#antisymmetry-1)
+  * [Equvialence Relation (Relacja równoważności)](#equvialence-relation-relacja-równowanoci)
+- [Sets](#sets)
+  * [Totally ordered sets](#totally-ordered-sets)
+    + [Trichotomy (Trychotomiczność)](#trichotomy-trychotomiczno)
+  * [Partially ordered sets](#partially-ordered-sets)
+- [Category Theory](#category-theory)
+  * [Basic terms and axioms](#basic-terms-and-axioms)
+  * [Relationship](#relationship)
+  * [Directionality](#directionality)
+  * [Correspondence](#correspondence)
+  * [Composition](#composition)
+
+---
+
+After all that years now I know why I'm so big fan of movie spoilers:
+> "Example first" is a mantra urging us to introduce examples before theory when teaching math. However, I personally
+> prefer seeing theory bvefore examples, so I've always been a bit ambivalent about that mantra. Some people prefer it
+> one way round and some people prefer it another.
+
+~ Cheng, E. [3]
+
+# Introduction
+
+- **Binary Relation (aRb, a~b)** involves two arguments and points relation as variable.
+
+- `=` looks like `=` because there's nothing more equal than two parrallel lines
+
+## Reflexity (Zwrotność)
+- **Definition:** A relation R on a set S is called reflexive if `∀a ∈ S, aRa`
+---
+- **Example 1:** Let `S = ℝ` and let `R` be the relation `=`.  
+Now, given `a ∈ ℝ` certainly `a = a` so `R` is **indeed reflexive**.
+- **Example 2:** 
+- **Example 3:**
+
+
+## Symmetry
+- **Definition:** A relation R on a set S is called symmetric if `∀a,b ∈ S, if aRb then bRa`
+---
+- **Example 1:**
+- **Example 2:**
+- **Example 3:**
+
+### Antisymmetry
+- **Definition:** A relation R on a set S is called antisymmetric if `∀a,b ∈ S, if aRb never bRa`
+---
+- **Example 1:** Let `S = ℝ` and let `R` be the relation `<`.  
+Now, let `a,b ∈ ℝ`. If `a < b` then it is definitely never `b < a`
+
+## Transitivity (Przechodniość)
+- **Definition:** A relation R on a set S is called transitive if `∀a,b,c ∈ S: { aRb & bRc } => aRc`
+---
+- **Example 1:**
+- **Example 2:**
+- **Example 3:**
+### Antisymmetry
+## Equvialence Relation (Relacja równoważności)
+- **Definition:** If a relation R on a set S is reflexive, symmetric and transitive then we call it an *equivalence relation*.
+---
+- **Example 1:**
+
+# Sets
+## Totally ordered sets
+### Trichotomy (Trychotomiczność)
+## Partially ordered sets
+
+
+# Category Theory
+- *Pedantry* is precision that does not increase clarity.
+- A *diagram* in a category is a collection of objects and arrows from the category, possibly not all of them.
+A diagram is said to *commute* if any two composable strings with the same endpoints produce the same pomposite.
+
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Equivalence Relation</th>
+        <th>Category</th>
+        <th>Group</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td>
+        <td>objects<br>relations</td>
+        <td>objects<br>arrows</td>
+        <td><br>objects</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><b>PROPERTIES</b></td>
+        <td>reflexivity<br>symmetry<br>transitivity</td>
+        <td>identities<br>inverses<br>composition</td>
+        <td>identity<br>inverses<br>binary operation</td>
+        <td><b>STRUCTURE</b></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>unitality<br>associativity</td>
+        <td>unitality<br>associativity</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+## Basic terms and axioms
 - Category
   - Objects
     - e.g.: `A`, `B`, `C`
@@ -28,7 +140,7 @@ Based on [Bartosz Milewski's lectures](https://www.youtube.com/playlist?list=PLb
       - g ∘ id<sub>a</sub> = g
     - <img src="pic/identity.png" alt="identity diagram" width="300"/>
   
-# Relationship
+## Relationship
 <img src="pic/relationship.png" alt="relation diagram" width="300"/>
 
 - Mapping objects in sets with arrow we have ordered pairs
@@ -41,7 +153,7 @@ Based on [Bartosz Milewski's lectures](https://www.youtube.com/playlist?list=PLb
   - `f: X->Y, f(X) = {f(x) | x ∈ X}`
     - e.g.: `X = {1,2,3}, Y = {a,b,c,d}, Im(f) = {a,c}`
 
-# Directionality
+## Directionality
 Is the function invertible? Usually it is not. 
 - Function `f :: a->b` is invertible if there's
 - another function `g :: b->a`.
@@ -58,7 +170,7 @@ true or false. You can make an inversion, however you have multiple values calle
 2. If a function maps to an image of codomain, you can't really invert codomain. You can only make an inversion of the image.
   - <img src="pic/image.png" alt="image" width="300"/>
 
-# Correspondence
+## Correspondence
 - Point (1) from [directionality] corresponds to **abstracting**
   - > You can boil an egg, but you can't unboil the egg.
   - > I really don't care of which points I came from (x fiber). I'm only interested in one property there (y)
@@ -86,4 +198,4 @@ I have to explain these things only in terms of morphisms.
 - Surjective (onto) -> **Epic**, **Epimorphism**
 - Injective -> **Monic**, **Monomorphism**
 
-# Composition
+## Composition
