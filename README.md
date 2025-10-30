@@ -15,40 +15,50 @@ Based on
   * [Composition](#composition)
 
 ---
-`=` syntactically looks like `=` because there's nothing more equal than two parallel line.
+- `=` syntactically looks like `=` because there's nothing more equal than two parallel line.
+- After all that years now I know why I'm so big fan of movie spoilers:
+  > "Example first" is a mantra urging us to introduce examples before theory when teaching math. However, I personally
+  > prefer seeing theory bvefore examples, so I've always been a bit ambivalent about that mantra. Some people prefer it
+  > one way round and some people prefer it another.
 
-After all that years now I know why I'm so big fan of movie spoilers:
-> "Example first" is a mantra urging us to introduce examples before theory when teaching math. However, I personally
-> prefer seeing theory bvefore examples, so I've always been a bit ambivalent about that mantra. Some people prefer it
-> one way round and some people prefer it another.
-
-~ Cheng, E. [3]
-
+  ~ Cheng, E. [3]
+- `ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ ⊂ ℂ`
+- **element**: not emphasizing anything dimensional. **object**: emphasizing dimensionality.
 
 # Binary Relation
 
 Binary Relation involves two arguments (`a,b`) and *relation* (`R`, `~`) as variable: (`aRb`, `a~b`) 
 
-- **Reflexity**
+- **Reflexity**: involves one object.
   - **Definition:** A relation R on a set S is called reflexive if `∀a ∈ S, aRa`
     - **Example 1:** Let `S = ℝ` and let `R` be the relation `=`.  
-    Now, given `a ∈ ℝ` certainly `a = a` so `R` is **indeed reflexive**.
-    - **Example 2:** 
-    - **Example 3:**
-- **Symmetry**
+      - Now, given `a ∈ ℝ` certainly `a = a` so `R` is **indeed reflexive**.
+    - **Example 2:** Let `S = ℝ` and let `R` be the relation `<`.  
+      - Now, given `a ∈ ℝ` certainly `a < a` so `R` is **not reflexive**.
+- **Symmetry**: involves two objects.
   - **Definition:** A relation R on a set S is called symmetric if `∀a,b ∈ S, if aRb then bRa`
-    - **Example 1:**
-    - **Example 2:**
-    - **Example 3:**
+    - **Example 1:** Let `S = ℝ` and let `R` be the relation `=`.  
+      - Now, let `a,b ∈ ℝ`. If `a = b` then it is also true that `b = a`, so this relation is **symmetric.**
+    - **Example 2:** Let `S = ℝ` and let `R` be the relation `<`.  
+      - Now, let `a,b ∈ ℝ`. If `a < b` then it is definitely not true `b < a`, so this relation is **not symmetric.**
+    - **Example 3:** Let `S = ℤ` and let `R` be the relation `|`.  
+      - Now, let `a,b ∈ ℤ`. If `a | b` then it is possible that `b | a`: `2 | 2` but it is not necessarily true
+        - `2 | 4` but not `4 ∤ 2` so the relation is **not symmetric.**
   - **Antisymmetry**
     - **Definition:** A relation R on a set S is called antisymmetric if `∀a,b ∈ S, if aRb never bRa`
       - **Example 1:** Let `S = ℝ` and let `R` be the relation `<`.  
-      Now, let `a,b ∈ ℝ`. If `a < b` then it is definitely never `b < a`
-- **Transitivity** 
-  - **Definition:** A relation R on a set S is called transitive if `∀a,b,c ∈ S: { aRb & bRc } => aRc`
-    - **Example 1:**
-    - **Example 2:**
-    - **Example 3:**
+        - Now, let `a,b ∈ ℝ`. If `a < b` then it is definitely never `b < a`
+- **Transitivity**: involves three or more objects.
+  - **Definition:** A relation R on a set S is called transitive if `∀a,b,c ∈ S: {aRb & bRc} => aRc`
+    - **Example 1:** Let `S = ℝ` and let `R` be the relation `=`.  
+      - Now, let `a,b,c ∈ ℝ`. If `a = b` and `b = c`  then it follows that `a = c`, so this relation is **transitive.**
+    - **Example 2:** Let `S = ℝ` and let `R` be the relation `<`.  
+      - Now, let `a,b,c ∈ ℝ`. If `a < b` and `b < c` then it follows that `a < c`, so this relation is **transitive.**
+    - **Example 3:** if `a` is the mother of `b` and `b` is the mother of `c` 
+      - then `a` is definitely not the mother of `c`, so the relation `is the mother of` is **not transitive**.
+    - **Example 4:** if `a` is the sister of `b` and `b` is the sister of `c`
+      - then it is possible that `a` is the sister of `c` but it is not necessarily true
+        - `a = person1`, `b = person2`, `c = person1` so the relation is **not transitivie**
 - **Equivalence Relation**
   - **Definition:** If a relation R on a set S is reflexive, symmetric and transitive then we call it an *equivalence relation*.
     - **Example 1:**
