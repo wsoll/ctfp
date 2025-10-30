@@ -5,17 +5,8 @@ Based on
 
 ---
 
-- [Introduction](#introduction)
-  * [Reflexity (Zwrotność)](#reflexity-zwrotno)
-  * [Symmetry](#symmetry)
-    + [Antisymmetry](#antisymmetry)
-  * [Transitivity (Przechodniość)](#transitivity-przechodnio)
-    + [Antisymmetry](#antisymmetry-1)
-  * [Equvialence Relation (Relacja równoważności)](#equvialence-relation-relacja-równowanoci)
+- [Binary Relation](#binary-relation)
 - [Sets](#sets)
-  * [Totally ordered sets](#totally-ordered-sets)
-    + [Trichotomy (Trychotomiczność)](#trichotomy-trychotomiczno)
-  * [Partially ordered sets](#partially-ordered-sets)
 - [Category Theory](#category-theory)
   * [Basic terms and axioms](#basic-terms-and-axioms)
   * [Relationship](#relationship)
@@ -24,6 +15,7 @@ Based on
   * [Composition](#composition)
 
 ---
+`=` syntactically looks like `=` because there's nothing more equal than two parallel line.
 
 After all that years now I know why I'm so big fan of movie spoilers:
 > "Example first" is a mantra urging us to introduce examples before theory when teaching math. However, I personally
@@ -32,50 +24,39 @@ After all that years now I know why I'm so big fan of movie spoilers:
 
 ~ Cheng, E. [3]
 
-# Introduction
 
-- **Binary Relation (aRb, a~b)** involves two arguments and points relation as variable.
+# Binary Relation
 
-- `=` looks like `=` because there's nothing more equal than two parrallel lines
+Binary Relation involves two arguments (`a,b`) and *relation* (`R`, `~`) as variable: (`aRb`, `a~b`) 
 
-## Reflexity (Zwrotność)
-- **Definition:** A relation R on a set S is called reflexive if `∀a ∈ S, aRa`
----
-- **Example 1:** Let `S = ℝ` and let `R` be the relation `=`.  
-Now, given `a ∈ ℝ` certainly `a = a` so `R` is **indeed reflexive**.
-- **Example 2:** 
-- **Example 3:**
-
-
-## Symmetry
-- **Definition:** A relation R on a set S is called symmetric if `∀a,b ∈ S, if aRb then bRa`
----
-- **Example 1:**
-- **Example 2:**
-- **Example 3:**
-
-### Antisymmetry
-- **Definition:** A relation R on a set S is called antisymmetric if `∀a,b ∈ S, if aRb never bRa`
----
-- **Example 1:** Let `S = ℝ` and let `R` be the relation `<`.  
-Now, let `a,b ∈ ℝ`. If `a < b` then it is definitely never `b < a`
-
-## Transitivity (Przechodniość)
-- **Definition:** A relation R on a set S is called transitive if `∀a,b,c ∈ S: { aRb & bRc } => aRc`
----
-- **Example 1:**
-- **Example 2:**
-- **Example 3:**
-### Antisymmetry
-## Equvialence Relation (Relacja równoważności)
-- **Definition:** If a relation R on a set S is reflexive, symmetric and transitive then we call it an *equivalence relation*.
----
-- **Example 1:**
+- **Reflexity**
+  - **Definition:** A relation R on a set S is called reflexive if `∀a ∈ S, aRa`
+    - **Example 1:** Let `S = ℝ` and let `R` be the relation `=`.  
+    Now, given `a ∈ ℝ` certainly `a = a` so `R` is **indeed reflexive**.
+    - **Example 2:** 
+    - **Example 3:**
+- **Symmetry**
+  - **Definition:** A relation R on a set S is called symmetric if `∀a,b ∈ S, if aRb then bRa`
+    - **Example 1:**
+    - **Example 2:**
+    - **Example 3:**
+  - **Antisymmetry**
+    - **Definition:** A relation R on a set S is called antisymmetric if `∀a,b ∈ S, if aRb never bRa`
+      - **Example 1:** Let `S = ℝ` and let `R` be the relation `<`.  
+      Now, let `a,b ∈ ℝ`. If `a < b` then it is definitely never `b < a`
+- **Transitivity** 
+  - **Definition:** A relation R on a set S is called transitive if `∀a,b,c ∈ S: { aRb & bRc } => aRc`
+    - **Example 1:**
+    - **Example 2:**
+    - **Example 3:**
+- **Equivalence Relation**
+  - **Definition:** If a relation R on a set S is reflexive, symmetric and transitive then we call it an *equivalence relation*.
+    - **Example 1:**
 
 # Sets
-## Totally ordered sets
-### Trichotomy (Trychotomiczność)
-## Partially ordered sets
+[//]: # (## Totally ordered sets)
+[//]: # (### Trichotomy)
+[//]: # (## Partially ordered sets)
 
 
 # Category Theory
