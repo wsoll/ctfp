@@ -58,10 +58,14 @@ Binary Relation involves two arguments (`a,b`) and *relation* (`R`, `~`) as vari
       - then `a` is definitely not the mother of `c`, so the relation `is the mother of` is **not transitive**.
     - **Example 4:** if `a` is the sister of `b` and `b` is the sister of `c`
       - then it is possible that `a` is the sister of `c` but it is not necessarily true
-        - `a = person1`, `b = person2`, `c = person1` so the relation is **not transitivie**
+        - `a = person1`, `b = person2`, `c = person1` so the relation is **not transitive**
 - **Equivalence Relation**
   - **Definition:** If a relation R on a set S is reflexive, symmetric and transitive then we call it an *equivalence relation*.
-    - **Example 1:**
+    - **Example 1:** Let `S = ℤ` and let `R` be the relation `≤`.  Now, given `a,b,c ∈ ℤ`:
+      - Certainly `a ≤ a` so `R` is reflexive. 
+      - But it is not symmetric: `a ≤ b` and `b ≤ a` could be true only if `a = b`.
+      - If `a ≤ b` and `b ≤ c` then it follows that `a ≤ c`, so this relation is transitive.
+        - So the relation is **not equivalence relation**
 
 # Sets
 [//]: # (## Totally ordered sets)
