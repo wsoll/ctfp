@@ -6,15 +6,16 @@ Based on
    Press.
 
 ---
-
 - [Binary Relation](#binary-relation)
 - [Sets](#sets)
+   * [Totally ordered sets (Tosets)](#totally-ordered-sets-tosets)
+      + [Trichotomy](#trichotomy)
+   * [Partially ordered sets (Posets)](#partially-ordered-sets-posets)
 - [Category Theory](#category-theory)
-    * [Basic terms and axioms](#basic-terms-and-axioms)
-    * [Relationship](#relationship)
-    * [Directionality](#directionality)
-    * [Correspondence](#correspondence)
-    * [Composition](#composition)
+   * [Relationship](#relationship)
+   * [Directionality](#directionality)
+   * [Correspondence](#correspondence)
+   * [Composition](#composition)
 
 # Binary Relation
 
@@ -112,10 +113,10 @@ In the categorical definition we don't need the other conditions because:
 
 - **Definition:** A partially ordered set is a category in which for any objects `a`, `b` there is at most one arrow
   between them.
-    - Known as: **(P, ≤)**
+- Known as: **(P, ≤)**
     - Therefore `a -> b` is `true/false` statement: `true` - arrow or `false` - no arrow.
         - **Example:** Let `S = <1, 30>` and let `R` be the relation `|`. Now given  `a = 30, b ∈ <1, 30>`:
-            - `1,2,3,5,6,10,15,30`
+            - `P = {1,2,3,5,6,10,15,30}`
                 - `1` because `1|30`
                     - ->`2` -------> `30`
                         - ->`6` ->
