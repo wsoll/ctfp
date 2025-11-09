@@ -6,20 +6,30 @@ Based on
    Press.
 
 ---
-- [Binary Relation](#binary-relation)
-- [Sets](#sets)
-   * [Totally ordered sets (Tosets)](#totally-ordered-sets-tosets)
-      + [Trichotomy](#trichotomy)
-   * [Partially ordered sets (Posets)](#partially-ordered-sets-posets)
+
+- [Formal Logic](#formal-logic)
+- [Set Theory](#set-theory)
+- [Relation Theory](#relation-theory)
+- [Ordered structures](#ordered-structures)
+    * [Binary Relation](#binary-relation)
+    * [Totally ordered sets (Tosets)](#totally-ordered-sets-tosets)
+        + [Trichotomy](#trichotomy)
+    * [Partially ordered sets (Posets)](#partially-ordered-sets-posets)
 - [Category Theory](#category-theory)
-   * [Relationship](#relationship)
-   * [Directionality](#directionality)
-   * [Correspondence](#correspondence)
-   * [Composition](#composition)
+    * [Relationship](#relationship)
+    * [Directionality](#directionality)
+    * [Correspondence](#correspondence)
+    * [Composition](#composition)
 
-# Binary Relation
+# Formal Logic
 
-Binary Relation involves two arguments (`a,b`) and *relation* (`R`, `~`) as variable: (`aRb`, `a~b`)
+# Set Theory
+
+# Relation Theory
+
+# Ordered structures
+To define ordered structure we need a definition of binary relation. Binary relation involves two arguments (`a,b`) and
+*relation* (`R`,`~`) as variable: (`aRb`, `a~b`)
 
 - **Reflexity**: involves one object.
     - **Definition:** A relation R on a set S is called reflexive if `∀a ∈ S, aRa`
@@ -64,14 +74,11 @@ Binary Relation involves two arguments (`a,b`) and *relation* (`R`, `~`) as vari
                 - So the relation is **not equivalence relation**
         - **Example 2:** ...
 
-# Sets
-
-...
-
 ## Totally ordered sets (Tosets)
 
 - **Definition:** A totally ordered set is a category in which for all objects `a`, `b` there is exactly one arrow
   between them.
+- **(T, ≤)**: reflexive, antisymmetric, transitive, **comparable**
     - **Example:** Let `S = ℕ` and let `R` be the relation `≤`. Now given `a,b ∈ ℕ`:
         - Definitely `a ≤ b` or `b ≤ a` is true, and they can't both be unless `a = b`.
             - Therefore `ℕ` is totally ordered set.
@@ -113,7 +120,7 @@ In the categorical definition we don't need the other conditions because:
 
 - **Definition:** A partially ordered set is a category in which for any objects `a`, `b` there is at most one arrow
   between them.
-- Known as: **(P, ≤)**
+- **(P, ≤), reflexive, antisymmetric, transitive**
     - Therefore `a -> b` is `true/false` statement: `true` - arrow or `false` - no arrow.
         - **Example:** Let `S = <1, 30>` and let `R` be the relation `|`. Now given  `a = 30, b ∈ <1, 30>`:
             - `P = {1,2,3,5,6,10,15,30}`
