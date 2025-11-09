@@ -1,6 +1,6 @@
 Based on
 
-1. Milewski, B. (2019). Category theory for programmers. Blurb.
+1. [Milewski, B. (2019). Category theory for programmers. Blurb.](https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/)
 2. [Milewski B. Course on Category Theory I, YouTube](https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_)
 3. Cheng, E. (2023). The joy of abstraction: An exploration of math, category theory, and life. Cambridge University
    Press.
