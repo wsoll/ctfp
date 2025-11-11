@@ -14,8 +14,11 @@ Based on
 - [Ordered structures](#ordered-structures)
     * [Binary Relation](#binary-relation)
     * [Totally ordered sets (Tosets)](#totally-ordered-sets-tosets)
-        + [Trichotomy](#trichotomy)
+        + [Trichotomy and Comparability](#trichotomy-and-comparability)
     * [Partially ordered sets (Posets)](#partially-ordered-sets-posets)
+        + [Structural and Quantitive view](#structural-and-quantitive-view)
+- [Small Structures](#small-structures-catergories)
+- [Large Categories](#large-categories)
 - [Category Theory](#category-theory)
     * [Relationship](#relationship)
     * [Directionality](#directionality)
@@ -96,22 +99,22 @@ Ways how a category of totally ordered sets could fail:
 
 <img src="pic/ordered_set_category_fails.png" alt="category fails" width="500"/>
 
-### Trichotomy
+### Trichotomy and Comparability
 
-In math we typically use the "inclusive or" which really means "and/or". So `a ≤ b or b ≤ a` means `a ≤ b or b ≤ a
-or both`. If we mean one of them but not both, that's called "exclusive or". There are various reasons for
-preferring the inclusive or, but one is that it comes up more often and so it's more **efficient** to take it as the
-default.
-
-The reflexivity condition for totally ordered set definition is redundant: **reflexitivity is a special case of
+The reflexivity condition for totally ordered set definition is redundant: **reflexivity is a special case of
 trichotomy**:
-
-- if we put `a = b` in the definition of trichotomy, we get `a ≤ b or b ≤ a`, wchich is reflexivity
+- if we put `a = b` in the definition of trichotomy, we get `a ≤ b or b ≤ a`, which is reflexivity
     - If we say "X is true or X is true" then it's logically equivalent to saying "X is true".
+
+Similarly, **comparability** is an immediate consequence of trichotomy:
+- for any `a, b`, trichotomy states that exactly one of `a < b`, `a = b`, or `b < a` holds.
+- ignoring equality, this implies that for every pair `a, b`, *either* `a ≤ b` *or* `b ≤ a` — i.e., the elements are **comparable**.
+
+Thus, trichotomy => comparability, and comparability together with antisymmetry defines a total (non-strict) order.
 
 In the categorical definition we don't need the other conditions because:
 
-1. Reflexivity comes from the category having indetities.
+1. Reflexivity comes from the category having identities.
 2. Transitivity comes from composition in the category.
 3. Antisymmetry and trichotomy both come from there being exactly one arrow between `a` and `b`
     - antisymmetry comes from there being *at most one* - `∃!`
@@ -135,9 +138,17 @@ In the categorical definition we don't need the other conditions because:
                     - ->`5` -------> `30`
                         - ->`10`->
                         - ->`15`->
+- **Non-categorical definition of partially ordered set**: same as toset (reflexive, antisymmetric transitive) 
+  definition but without **trichotomy**.
 
-<img src="pic/3d30factors.png" alt="category fails" width="300"/>
-<img src="pic/composition.png" alt="composition" width="475"/>
+### Structural and Quantitive view
+1. Hierarchy of overall divisors -> **the structural view**
+    - <img src="pic/composition.png" alt="composition" width="475"/>
+2. Hierarchy by number of types of divisors -> **the quantitative view**
+   - <img src="pic/quantitave_factors_lvls.png" alt="category fails" width="600"/>
+
+# Small Structures (Catergories)
+# Large categories
 
 # Category Theory
 
@@ -164,11 +175,11 @@ In the categorical definition we don't need the other conditions because:
         <td></td>
       </tr>
       <tr>
-        <td><b>PROPERTIES</b></td>
+        <td><b>P<br>R<br>O<br>P<br>E<br>R<br>T<br>I<br>E<br>S</b></td>
         <td>reflexivity<br>symmetry<br>transitivity</td>
         <td>identities<br>inverses<br>composition</td>
         <td>identity<br>inverses<br>binary operation</td>
-        <td><b>STRUCTURE</b></td>
+        <td><b>S<br>T<br>R<br>U<br>C<br>T<br>U<br>R<br>E</b></td>
       </tr>
       <tr>
         <td></td>
@@ -231,13 +242,10 @@ Why most function and not invertible?
 
 1. Let's take function `bool isEven(int x)`. It collapses x<sub>1</sub>, x<sub>2</sub>, ... to two values:
    true or false. You can make an inversion, however you have multiple values called **fiber**.
-
-- <img src="pic/fiber.png" alt="fiber" width="300"/>
-
+    - <img src="pic/fiber.png" alt="fiber" width="300"/>
 2. If a function maps to an image of codomain, you can't really invert codomain. You can only make an inversion of the
    image.
-
-- <img src="pic/image.png" alt="image" width="300"/>
+    - <img src="pic/image.png" alt="image" width="300"/>
 
 ## Correspondence
 
