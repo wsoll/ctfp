@@ -32,6 +32,7 @@ Based on
 # Relation Theory
 
 # Ordered structures
+
 To define ordered structure we need a definition of binary relation. Binary relation involves two arguments (`a,b`) and
 *relation* (`R`,`~`) as variable: (`aRb`, `a~b`)
 
@@ -103,12 +104,15 @@ Ways how a category of totally ordered sets could fail:
 
 The reflexivity condition for totally ordered set definition is redundant: **reflexivity is a special case of
 trichotomy**:
+
 - if we put `a = b` in the definition of trichotomy, we get `a ≤ b or b ≤ a`, which is reflexivity
     - If we say "X is true or X is true" then it's logically equivalent to saying "X is true".
 
 Similarly, **comparability** is an immediate consequence of trichotomy:
+
 - for any `a, b`, trichotomy states that exactly one of `a < b`, `a = b`, or `b < a` holds.
-- ignoring equality, this implies that for every pair `a, b`, *either* `a ≤ b` *or* `b ≤ a` — i.e., the elements are **comparable**.
+- ignoring equality, this implies that for every pair `a, b`, *either* `a ≤ b` *or* `b ≤ a` — i.e., the elements are *
+  *comparable**.
 
 Thus, trichotomy => comparability, and comparability together with antisymmetry defines a total (non-strict) order.
 
@@ -126,7 +130,8 @@ In the categorical definition we don't need the other conditions because:
   between them.
 - **(P, ≤), reflexive, antisymmetric, transitive**
     - Therefore `a -> b` is `true/false` statement: `true` - arrow or `false` - no arrow.
-        - **Example:** Let `S = <1, 30>` and let `R` be the relation `|`. Now given  `a = 30, b ∈ <1, 30>`:
+        - **Example:** Let `S = {1,2,...,30}` and let `R` be the relation defined by divisibility`|`. Now
+          given  `a = 30, b ∈ {1,2,...,30}`:
             - `P = {1,2,3,5,6,10,15,30}`
                 - `1` because `1|30`
                     - ->`2` -------> `30`
@@ -138,16 +143,18 @@ In the categorical definition we don't need the other conditions because:
                     - ->`5` -------> `30`
                         - ->`10`->
                         - ->`15`->
-- **Non-categorical definition of partially ordered set**: same as toset (reflexive, antisymmetric transitive) 
+- **Non-categorical definition of partially ordered set**: same as toset (reflexive, antisymmetric transitive)
   definition but without **trichotomy**.
 
 ### Structural and Quantitive view
+
 1. Hierarchy of overall divisors -> **the structural view**
     - <img src="pic/composition.png" alt="composition" width="475"/>
 2. Hierarchy by number of types of divisors -> **the quantitative view**
-   - <img src="pic/quantitave_factors_lvls.png" alt="category fails" width="600"/>
+    - <img src="pic/quantitave_factors_lvls.png" alt="category fails" width="600"/>
 
 # Small Structures (Catergories)
+
 # Large categories
 
 # Category Theory
