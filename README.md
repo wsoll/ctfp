@@ -17,8 +17,9 @@ Based on
         + [Trichotomy and Comparability](#trichotomy-and-comparability)
     * [Partially ordered sets (Posets)](#partially-ordered-sets-posets)
         + [Structural and Quantitive view](#structural-and-quantitive-view)
-- [Small Structures](#small-structures-catergories)
-- [Large Categories](#large-categories)
+- [Structures](#structures)
+    * [Monoid](#monoid)
+    * [Groupoid](#groupoid)
 - [Category Theory](#category-theory)
     * [Relationship](#relationship)
     * [Directionality](#directionality)
@@ -125,7 +126,6 @@ In the categorical definition we don't need the other conditions because:
     - trichotomy from there being *at least one* - `∃`
 
 ## Partially ordered sets (Posets)
-
 - **Definition:** A partially ordered set is a category in which for any objects `a`, `b` there is at most one arrow
   between them.
 - **(P, ≤), reflexive, antisymmetric, transitive**
@@ -153,9 +153,90 @@ In the categorical definition we don't need the other conditions because:
 2. Hierarchy by number of types of divisors -> **the quantitative view**
     - <img src="pic/quantitave_factors_lvls.png" alt="category fails" width="600"/>
 
-# Small Structures (Catergories)
+# Structures
+- **Definition:** A category is called discrete if it has no arrows except identity arrows.
 
-# Large categories
+## Monoid
+- **Definition:** A category with only one object is called a monoid.
+- **Non-categorical definition of a monoid**:
+  - A monoid is a set M equipped with an identity 1 and a unital and associative binary operator `∘`. The monoid is 
+    sometimes written fully as `(M,∘,1)`
+      - *unital* means that: `∀m ∈ M, 1∘m = m∘1` 
+      - *associativity* means that: `∀a,b,c ∈ M, (a∘b)∘c = a∘(b∘c)`
+
+<table>
+<thead>
+  <tr>
+    <th></th>
+    <th><b>non-categorical</b></th>
+    <th><b>categorical</b></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><b>DATA</b></td>
+    <td><br>objects <b>----------------></b></td>
+    <td>"dummy" object<br>arrows</td>
+  </tr>
+  <tr>
+    <td><b>STRUCTURE</b></td>
+    <td>identity object <b>-------></b><br>binary operation <b>----></b></td>
+    <td>identity arrow <br>composition</td>
+  </tr>
+  <tr>
+    <td><b>PROPERTIES</b></td>
+    <td>unitality <b>---------------></b><br>associativity <b>---------></b></td>
+    <td>unitality<br>associativity</td>
+  </tr>
+</tbody>
+</table>
+
+## Groupoid
+- **Definition:** An *inverse* for an element `a` of a monoid `(M,∘,1)` is an element `b` such that `a∘b=1` and 
+  `b∘a=1`.
+- **Definition:** A *group* is a monoid in which every element has an **inverse**.
+- **Non-categorical definition of a group:** a *group* consists of a set `G` equipped with a binary operation `∘` 
+  and an identity element 1 satisfying unit laws and associativity, and such that every element has an **inverse** with 
+  respect to `∘`
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Equivalence Relation</th>
+      <th>Category</th>
+      <th>Group</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td>objects<br>relations</td>
+      <td>objects<br>arrows</td>
+      <td><br>objects</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><b>P<br>R<br>O<br>P<br>E<br>R<br>T<br>I<br>E<br>S</b></td>
+      <td>reflexivity<br>symmetry<br>transitivity</td>
+      <td>identities<br>inverses<br>composition</td>
+      <td>identity<br>inverses<br>binary operation</td>
+      <td><b>S<br>T<br>R<br>U<br>C<br>T<br>U<br>R<br>E</b></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>unitality<br>associativity</td>
+      <td>unitality<br>associativity</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+- **Definition:** a *groupoid* is a category in which every arrow has an inverse.
 
 # Category Theory
 
@@ -163,40 +244,6 @@ In the categorical definition we don't need the other conditions because:
 - A *diagram* in a category is a collection of objects and arrows from the category, possibly not all of them.
   A diagram is said to *commute* if any two composable strings with the same endpoints produce the same pomposite.
 
-  <table>
-    <thead>
-      <tr>
-        <th></th>
-        <th>Equivalence Relation</th>
-        <th>Category</th>
-        <th>Group</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td></td>
-        <td>objects<br>relations</td>
-        <td>objects<br>arrows</td>
-        <td><br>objects</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><b>P<br>R<br>O<br>P<br>E<br>R<br>T<br>I<br>E<br>S</b></td>
-        <td>reflexivity<br>symmetry<br>transitivity</td>
-        <td>identities<br>inverses<br>composition</td>
-        <td>identity<br>inverses<br>binary operation</td>
-        <td><b>S<br>T<br>R<br>U<br>C<br>T<br>U<br>R<br>E</b></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td>unitality<br>associativity</td>
-        <td>unitality<br>associativity</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 
 - Category
     - Objects
