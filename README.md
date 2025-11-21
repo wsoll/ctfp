@@ -9,6 +9,8 @@ Based on
 ---
 
 - [Formal Logic](#formal-logic)
+    * [Tautologies](#tautologies)
+    * [First-order logic (predicate logic)](#first-order-logic-predicate-logic)
 - [Set Theory](#set-theory)
 - [Relation Theory](#relation-theory)
 - [Ordered structures](#ordered-structures)
@@ -27,6 +29,82 @@ Based on
     * [Composition](#composition)
 
 # Formal Logic
+
+There are 5 standard logic functors (in formal semantics) also called operators (in computer science) or logical
+connective (formal logic) in the following contexts:
+
+Other type of functors
+<table>
+<thead>
+  <tr>
+    <th><b>Symbol</b></th>
+    <th><b>Type</b></th>
+    <th><b>Note</b></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>∧, ∨, ~, =>, <=></td>
+    <td>logical functors</td>
+    <td>operators on propositions in propositional logic</td>
+  </tr>
+  <tr>
+    <td>∀, ∃</td>
+    <td>quantifier functors</td>
+    <td>build propositions from predicates</td>
+  </tr>
+  <tr>
+    <td>+, *, -</td>
+    <td>arithmetic functors / functions</td>
+    <td>numeric operators in function theory or algebra</td>
+  </tr>
+</tbody>
+</table>
+
+## Tautologies
+
+**Metaphysical**  
+These four laws were known in Philosophy for a long time. These have metaphysical implications. Especially (2) & (3) is
+considered in Thomism philosophy as guiding law of existence. Includes only one variable.
+
+1. **Reflexivity of implication**
+    - `p => p` - *every proposition implies itself*
+    - Every proposition is trivially sufficient for itself.
+2. **Law of excluded middle**
+    - `p ∨ ~p` - *either p is true or p is false.*
+    - There is no middle ground — every proposition is either true or false.
+3. **Law of non-contradiction**
+    - `~(p ∧ ~p)` - *it's impossible for p and not-p both be true.*
+    - A statement cannot be both true and false at the same time.
+4. **Double negation**
+    - `~~p <=> p` - *two negations cancel out*
+    - Denying a denial restores the original statement.
+
+---
+
+**Reduction/Explosion**  
+(1) and (2) includes only one variable where (3) and (4) includes two of them. All of them includes 4 types of
+functors excluding `iff` (`<=>`)
+
+1. **Reductio ad absurdum | Clavius's Law | Principle of Explosion (weak) | dictum mimrabilis**
+    - `(p => ~p) => ~p` - *if assuming p leads to contradiction, then p must be false*
+    - This is the basic form of proof by contradiction: once p implies its own falsity, we reject p.
+2. **Second version of Clavius's Law**
+    - `(~p => p) => p` - *If assuming ¬p leads to p being true, then p must indeed be true.*
+    - This is the "positive" form of reductio: contradiction in the negation confirms the original proposition.
+3. **Principle of Expolsion**
+    - `p ∧ ~p => q` - *If a contradiction is true, then any statement whatsoever follows.*
+    - Once a system contains a contradiction, it becomes logically meaningless in classical logic — every statement
+      becomes derivable.
+4. **Conditional form of Explosion**
+    - `p => (~p => q)`- *If p is true, then assuming p is false allows you to conclude anything.*
+    - This is a curried version of explosion, emphasizing that contradictions are catastrophic in classical reasoning:
+      starting from an impossible scenario, any outcome is logically forced.
+
+---
+**Interference**:
+
+## First-order logic (predicate logic)
 
 # Set Theory
 
@@ -126,6 +204,7 @@ In the categorical definition we don't need the other conditions because:
     - trichotomy from there being *at least one* - `∃`
 
 ## Partially ordered sets (Posets)
+
 - **Definition:** A partially ordered set is a category in which for any objects `a`, `b` there is at most one arrow
   between them.
 - **(P, ≤), reflexive, antisymmetric, transitive**
@@ -154,15 +233,17 @@ In the categorical definition we don't need the other conditions because:
     - <img src="pic/quantitave_factors_lvls.png" alt="category fails" width="600"/>
 
 # Structures
+
 - **Definition:** A category is called discrete if it has no arrows except identity arrows.
 
 ## Monoid
+
 - **Definition:** A category with only one object is called a monoid.
 - **Non-categorical definition of a monoid**:
-  - A monoid is a set M equipped with an identity 1 and a unital and associative binary operator `∘`. The monoid is 
-    sometimes written fully as `(M,∘,1)`
-      - *unital* means that: `∀m ∈ M, 1∘m = m∘1` 
-      - *associativity* means that: `∀a,b,c ∈ M, (a∘b)∘c = a∘(b∘c)`
+    - A monoid is a set M equipped with an identity 1 and a unital and associative binary operator `∘`. The monoid is
+      sometimes written fully as `(M,∘,1)`
+        - *unital* means that: `∀m ∈ M, 1∘m = m∘1`
+        - *associativity* means that: `∀a,b,c ∈ M, (a∘b)∘c = a∘(b∘c)`
 
 <table>
 <thead>
@@ -192,14 +273,13 @@ In the categorical definition we don't need the other conditions because:
 </table>
 
 ## Groupoid
-- **Definition:** An *inverse* for an element `a` of a monoid `(M,∘,1)` is an element `b` such that `a∘b=1` and 
+
+- **Definition:** An *inverse* for an element `a` of a monoid `(M,∘,1)` is an element `b` such that `a∘b=1` and
   `b∘a=1`.
 - **Definition:** A *group* is a monoid in which every element has an **inverse**.
-- **Non-categorical definition of a group:** a *group* consists of a set `G` equipped with a binary operation `∘` 
-  and an identity element 1 satisfying unit laws and associativity, and such that every element has an **inverse** with 
+- **Non-categorical definition of a group:** a *group* consists of a set `G` equipped with a binary operation `∘`
+  and an identity element 1 satisfying unit laws and associativity, and such that every element has an **inverse** with
   respect to `∘`
-
-
 
 <table>
   <thead>
