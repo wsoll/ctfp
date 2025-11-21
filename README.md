@@ -102,7 +102,29 @@ functors excluding `iff` (`<=>`)
       starting from an impossible scenario, any outcome is logically forced.
 
 ---
-**Interference**:
+**Interference/Modi**
+1. **modus ponendo ponens**
+    - `((p => q) ∧ p) => q`- *affirming by affirming*
+    -  If p implies q, and p is true, then q must also be true.
+2. **modus tollendo tollens**
+    - `((p => q) ∧ ~q) => ~p` - *denying by denying*
+    - If p implies q, and q is false, then p must also be false.
+3. **modus tollendo ponens**
+    - `((p ∨ q) ∧ ~p) => q` - *denying to affirm*
+    - If at least one of p or q is true, and p is false, then q must be true.
+4. **modus ponendo tollens**
+    - `(~(p => q) ∧ p) ~q` - *affirming to deny*
+    - If "p implies q" is false (meaning: p is true and q is false), and p is true, then q must be false.
+---
+**De Morgan's laws**
+1. **First De Morgan's law**
+   - `~(p ∧ q) <=> (~p ∨ ~q)`
+   - If it is not the case that both p and q are true, then at least one of them must be false.
+2. **Second De Morgan's law**
+   - `~(p ∨ q) <=> (~p ∧ ~q)`
+   - If it is not the case that either p or q is true, then both must be false.
+---
+
 
 ## First-order logic (predicate logic)
 
