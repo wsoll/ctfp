@@ -10,8 +10,6 @@ Based on
 
 - [Formal Logic](#formal-logic)
     * [Tautologies](#tautologies)
-    * [Necessity and sufficiency](#necessity-and-sufficiency)
-    * [First-order logic (predicate logic)](#first-order-logic-predicate-logic)
 - [Set Theory](#set-theory)
 - [Relation Theory](#relation-theory)
 - [Ordered structures](#ordered-structures)
@@ -32,7 +30,7 @@ Based on
 # Formal Logic
 
 There are 5 standard logic functors (in formal semantics) also called operators (in computer science) or logical
-connective (formal logic) in the following contexts:
+connective (formal logic): `∧, ∨, ~, =>, <=>`
 
 Other type of functors
 <table>
@@ -149,11 +147,26 @@ functors excluding `iff` (`<=>`)
     - `~(p => q) <=> ~(p ∧ ~q)`
     - *The only way “if p then q” can fail is when p actually happens but q does not.*
 
-## Necessity and sufficiency
-
-## First-order logic (predicate logic)
-
 # Set Theory
+
+- **Axiom of extensionality**
+    - **Definition:** Two sets are equal if and only if they have exactly the same elements.
+    - `A = B <=> ∀x(x ∈ A <=> x ∈ B)`, therefore
+    - `A ≠ B <=> ∃x[(x ∉ A ∧ x ∈ B) ∨ (x ∈ A ∧ x ∉ B)]`
+    - e.g.: 
+        - `{2, 5} = {5, 2} = {2, 2, 5} = {2, 2, 5, 5}`
+        - `{a} ≠ {a, b} <=> a ≠ b`
+        - `{a} = {a, b} = {a, a} <=> a = b`
+        - `{x} ≠ {{x}}`
+- **Set Inclusion (Subset)**
+- **Empty Set**
+    - **Definition:** A set is called empty when: 
+    - `{x: x = x ∧ x ≠ ∅ }` or written differently,
+    - `∅ = {x ∈ A: x ≠ x}`
+- **Power Set**
+- **Set Operations**
+- **Boolean algebra (structure)** 
+  - **Definition:** `...`
 
 # Relation Theory
 
