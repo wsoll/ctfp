@@ -10,6 +10,7 @@ Based on
 
 - [Formal Logic](#formal-logic)
     * [Tautologies](#tautologies)
+    * [Necessity and sufficiency](#necessity-and-sufficiency)
     * [First-order logic (predicate logic)](#first-order-logic-predicate-logic)
 - [Set Theory](#set-theory)
 - [Relation Theory](#relation-theory)
@@ -86,43 +87,52 @@ considered in Thomism philosophy as guiding law of existence. Includes only one 
 (1) and (2) includes only one variable where (3) and (4) includes two of them. All of them includes 4 types of
 functors excluding `iff` (`<=>`)
 
-1. **Reductio ad absurdum | Clavius's Law | Principle of Explosion (weak) | dictum mimrabilis**
-    - `(p => ~p) => ~p` - *if assuming p leads to contradiction, then p must be false*
+1. **Reductio ad absurdum | Clavius's Law | Principle of Explosion (weak)**
+    - `(p => ~p) => ~p`
+    - *if assuming p leads to contradiction, then p must be false*
     - This is the basic form of proof by contradiction: once p implies its own falsity, we reject p.
 2. **Second version of Clavius's Law**
-    - `(~p => p) => p` - *If assuming ¬p leads to p being true, then p must indeed be true.*
+    - `(~p => p) => p`
+    - *If assuming ¬p leads to p being true, then p must indeed be true.*
     - This is the "positive" form of reductio: contradiction in the negation confirms the original proposition.
-3. **Principle of Expolsion**
-    - `p ∧ ~p => q` - *If a contradiction is true, then any statement whatsoever follows.*
+3. **Principle of Expolsion | First Duns Scotus' law**
+    - `p ∧ ~p => q`
+    - *If a contradiction is true, then any statement whatsoever follows.*
     - Once a system contains a contradiction, it becomes logically meaningless in classical logic — every statement
       becomes derivable.
-4. **Conditional form of Explosion**
-    - `p => (~p => q)`- *If p is true, then assuming p is false allows you to conclude anything.*
+4. **Conditional form of Explosion | Second Duns Scotus' law**
+    - `p => (~p => q)`
+    - *If p is true, then assuming p is false allows you to conclude anything.*
     - This is a curried version of explosion, emphasizing that contradictions are catastrophic in classical reasoning:
       starting from an impossible scenario, any outcome is logically forced.
 
 ---
 **Interference/Modi**
-1. **modus ponendo ponens**
-    - `((p => q) ∧ p) => q`- *affirming by affirming*
-    -  If p implies q, and p is true, then q must also be true.
-2. **modus tollendo tollens**
-    - `((p => q) ∧ ~q) => ~p` - *denying by denying*
-    - If p implies q, and q is false, then p must also be false.
-3. **modus tollendo ponens**
-    - `((p ∨ q) ∧ ~p) => q` - *denying to affirm*
-    - If at least one of p or q is true, and p is false, then q must be true.
-4. **modus ponendo tollens**
-    - `(~(p => q) ∧ p) ~q` - *affirming to deny*
-    - If "p implies q" is false (meaning: p is true and q is false), and p is true, then q must be false.
+
+1. **modus ponendo ponens** (*affirming by affirming*)
+    - `((p => q) ∧ p) => q`
+    - *If p implies q, and p is true, then q must also be true.*
+2. **modus tollendo tollens** (*denying by denying*)
+    - `((p => q) ∧ ~q) => ~p`
+    - *If p implies q, and q is false, then p must also be false.*
+3. **modus tollendo ponens** (*denying to affirm*)
+    - `((p ∨ q) ∧ ~p) => q`
+    - *If at least one of p or q is true, and p is false, then q must be true.*
+4. **modus ponendo tollens** (*affirming to deny*)
+    - `(~(p => q) ∧ p) ~q`
+    - *If "p implies q" is false (meaning: p is true and q is false), and p is true, then q
+      must be false.*
+
 ---
 **De Morgan's laws**
+
 1. **First De Morgan's law**
-   - `~(p ∧ q) <=> (~p ∨ ~q)`
-   - If it is not the case that both p and q are true, then at least one of them must be false.
+    - `~(p ∧ q) <=> (~p ∨ ~q)`
+    - *If it is not the case that both p and q are true, then at least one of them must be false.*
 2. **Second De Morgan's law**
-   - `~(p ∨ q) <=> (~p ∧ ~q)`
-   - If it is not the case that either p or q is true, then both must be false.
+    - `~(p ∨ q) <=> (~p ∧ ~q)` 
+    - *If it is not the case that either p or q is true, then both must be false.*
+
 ---
 **Implication equivalences**
 
