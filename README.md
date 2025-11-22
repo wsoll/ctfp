@@ -119,7 +119,7 @@ functors excluding `iff` (`<=>`)
     - `((p ∨ q) ∧ ~p) => q`
     - *If at least one of p or q is true, and p is false, then q must be true.*
 4. **modus ponendo tollens** (*affirming to deny*)
-    - `(~(p => q) ∧ p) ~q`
+    - `(~(p => q) ∧ p) => ~q`
     - *If "p implies q" is false (meaning: p is true and q is false), and p is true, then q
       must be false.*
 
