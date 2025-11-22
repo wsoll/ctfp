@@ -124,7 +124,22 @@ functors excluding `iff` (`<=>`)
    - `~(p ∨ q) <=> (~p ∧ ~q)`
    - If it is not the case that either p or q is true, then both must be false.
 ---
+**Implication equivalences**
 
+1. **Contrapositive law**
+    - `(p => q) <=> (~q => ~p)` 
+    - *If p cannot lead to q being false, then whenever q is false, p must also be false.*
+2. **Disjunctive Form of Implication**
+    - `(p => q) <=> (~p ∨ q)`
+    - *"If p then q" is true unless p is true while q is false.*
+3. **Negated-Conjuction Form**
+    - `(p => q) <=> ~(p ∧ ~q)`
+    - An implication is simply the denial of a contradiction.
+4. **Failure Condition**
+    - `~(p => q) <=> ~(p ∧ ~q)`
+    - *The only way “if p then q” can fail is when p actually happens but q does not.*
+
+## Necessity and sufficiency
 
 ## First-order logic (predicate logic)
 
