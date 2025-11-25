@@ -159,6 +159,19 @@ functors excluding `iff` (`<=>`)
         - `{a} = {a, b} = {a, a} <=> a = b`
         - `{x} ≠ {{x}}`
 - **Set Inclusion (Subset)**
+  - We define subset by `A ⊆ B <=> ∀x(x ∈ A => x ∈ B)`
+      - e.g.: `ℕ ⊆ ℤ` or `{x ∈ ℕ : 6|x} ⊆ {x ∈ ℕ: 2|x ∧ 3|x}`
+  - inclusive relation has the following properties
+    - reflexivity: `A ⊆ A`
+    - antisymmetry: `A ⊆ B ∧ B ⊆ A => A = B`
+    - trichotomy: `(A ⊆ B) ∧ (B ⊆ C) => A ⊆ C`
+  - A **proper** (or **strict**) is denoted as `⊊` or `⊂` 
+    - it is defined as `A ⊊ B <=> A ⊆ B ∧ A ≠ B`
+        - e.g.: `ℕ ⊊ ℤ, {x ∈ ℕ : 6|x} ⊊ {x ∈ ℕ: 2|x}`
+    - proper inclusive relation  has the following properties
+      - anti-reflexivity: `~(A ⊊ A)`
+      - antisymmetry: `A ⊊ B => ~(B ⊊ A)`
+      - trichotomy: `A ⊊ B ∧ B ⊊ C => A ⊊ C`
 - **Empty Set**
     - **Definition:** A set is called empty when: 
     - `{x: x = x ∧ x ≠ ∅ }` or written differently,
@@ -259,7 +272,7 @@ In the categorical definition we don't need the other conditions because:
 
 1. Reflexivity comes from the category having identities.
 2. Transitivity comes from composition in the category.
-3. Antisymmetry and trichotomy both come from there being exactly one arrow between `a` and `b`
+3. **Antisymmetry and trichotomy** both come from there being **exactly one arrow between** `a` and `b`
     - antisymmetry comes from there being *at most one* - `∃!`
     - trichotomy from there being *at least one* - `∃`
 
